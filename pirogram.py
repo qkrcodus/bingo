@@ -211,16 +211,33 @@ class Game:
         # lambda함수에 대해 공부해 보세요! 물론 lambda 함수를 사용하지 않고 구현해도 좋습니다. 
         sorted_players = sorted(self.players, key=lambda x: (x.bingo_cnt, x.name), reverse=True)
 
+
+        ##### END OF TODO 5-(1)(문제와 본 라인 사이에 코드를 작성하세요.) #####
+
+        # TODO 5-(2): 사용자의 경우 이름 옆에 *을 붙여서 출력해주세요.(ex. *홍길동*) 점수가 같으면 등수도 같도록 반드시 동점자 처리를 해주세요.
+       
+        # current_rank = 1
+
+        # for idx, player in enumerate(sorted_players, start=1):
+        #     if idx > 1 and (player.bingo_cnt, player.name) == (sorted_players[idx - 2].bingo_cnt, sorted_players[idx - 2].name):
+        #         rank = current_rank
+        #     else:
+        #         rank = idx
+
+        #     if player.name == self.my_player:
+        #         print(f"{rank}등 - *{player.name}* : 빙고 {player.bingo_cnt}번")
+        #     else:
+        #         print(f"{rank}등 - {player.name} : 빙고 {player.bingo_cnt}번")
+
+        #     current_rank = rank
+
         for idx, player in enumerate(sorted_players, start=1):
             if player.name == self.my_player:
                 print(f"{idx}. *{player.name}* - 빙고 개수: {player.bingo_cnt}")
             else:
                 print(f"{idx}. {player.name} - 빙고 개수: {player.bingo_cnt}")
-
-        ##### END OF TODO 5-(1)(문제와 본 라인 사이에 코드를 작성하세요.) #####
-
-        # TODO 5-(2): 사용자의 경우 이름 옆에 *을 붙여서 출력해주세요.(ex. *홍길동*) 점수가 같으면 등수도 같도록 반드시 동점자 처리를 해주세요.
-
+        
+        # #등수 같게..
         ##### END OF TODO 5-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
     
 
